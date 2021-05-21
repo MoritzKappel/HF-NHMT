@@ -1,0 +1,6 @@
+*.png
+*.pdf
+*.pyc
+*.aux
+.vscode
+.DS_Store

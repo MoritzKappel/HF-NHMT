@@ -1,0 +1,6 @@
+[submodule "thirdparty/Self-Correction-Human-Parsing"]
+	path = thirdparty/Self-Correction-Human-Parsing
+	url = https://github.com/PeikeLi/Self-Correction-Human-Parsing.git
+[submodule "thirdparty/openpose"]
+	path = thirdparty/openpose
+	url = https://github.com/CMU-Perceptual-Computing-Lab/openpose.git

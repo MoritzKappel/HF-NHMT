@@ -1,0 +1,85 @@
+dataset:
+    background_path: TODO
+    load_dynamic: true
+    num_bone_channels: 11
+    num_segmentation_labels: 18
+    path: TODO
+    segmentation_background_label: 0
+    segmentation_clothes_labels:
+    - 1
+    - 4
+    - 5
+    - 6
+    - 7
+    - 16
+    - 17
+    target_actor_height: TODO
+    target_actor_name: self
+    target_actor_width: TODO
+    training_split: 0.95
+infer:
+    append_source_image: false
+    create_videos: true
+    generate_segmentations: true
+    generate_structure: true
+    gpu_index: 0
+    num_initial_iterations: 50
+    output_dir: null
+    render_checkpoint: null
+    segmentation_checkpoint: null
+    structure_checkpoint: null
+    structure_magnification: 1.0
+    use_cuda: true
+    use_gt_segmentation: false
+    use_gt_structure: false
+    validation_set: true
+    video_framerate: 50
+train:
+    checkpoint_backup_step: 5
+    gpu_index: 0
+    name_prefix: TODO
+    num_epochs: 50
+    output_checkpoints_dir: TODO
+    render_net:
+        adam_beta1: 0.5
+        adam_beta2: 0.999
+        enable: true
+        last_checkpoint: null
+        learningrate: 0.0002
+        learningrate_decay_factor: 0.5
+        learningrate_decay_step: 300000
+        loss_lambda_final_perceptive: 0.5
+        loss_lambda_final_reconstruction: 0.5
+        loss_lambda_foreground_perceptive: 0.9
+        loss_lambda_foreground_reconstruction: 0.1
+    segmentation_net:
+        adam_beta1: 0.5
+        adam_beta2: 0.999
+        enable: true
+        last_checkpoint: null
+        learningrate: 0.0002
+        learningrate_decay_factor: 0.5
+        learningrate_decay_step: 300000
+        loss_lambda: 1.0
+    structure_net:
+        adam_beta1: 0.5
+        adam_beta2: 0.999
+        enable: true
+        last_checkpoint: null
+        learningrate: 0.0002
+        learningrate_decay_factor: 0.5
+        learningrate_decay_step: 300000
+        loss_lambda: 0.5
+    tensorboard_logdir: TODO
+    training_visualization_indices: !!python/tuple
+    - 0.2
+    - 0.5
+    - 0.8
+    use_cuda: true
+    validation_visualization_indices: !!python/tuple
+    - 0.2
+    - 0.5
+    - 0.8
+    vgg_layers: !!python/tuple
+    - 1
+    - 6
