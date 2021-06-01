@@ -5,7 +5,9 @@
 
 <img src='resources/banner.jpg' width=800>
 
-### [Website](https://graphics.tu-bs.de/publications/kappel2020high-fidelity) | [Collaborators](http://gvv.mpi-inf.mpg.de/projects/NHMT/) | [ArXiv](https://arxiv.org/abs/2012.10974) <br>
+### [Website](https://graphics.tu-bs.de/publications/kappel2020high-fidelity) | [Collaborators](http://gvv.mpi-inf.mpg.de/projects/NHMT/) | [ArXiv](https://arxiv.org/abs/2012.10974) | [Video](https://www.youtube.com/watch?v=14VaWFVeKy4&t=1s) <br>
+
+
 Official PyTorch implementation of our HF-NHMT method described in our paper 'High-Fidelity Neural Human Motion Transfer from Monocular Video'.
 
 <img src='resources/example.gif' width=800>
@@ -73,7 +75,7 @@ To transfer new motion sequences to the target actor, adjust the *dataset* and *
 Note that during inference, the dataset path refers to the source actor sequence containing the new pose skeletons instead of the dataset used to train the target actor networks.
 
 ## Citation
-If you this our code for your publications, please cite our [paper](https://graphics.tu-bs.de/upload/publications/kappel2020NHMT/Kappel_NHMT.pdf) using the following BibTeX:
+If you use our code for your publications, please cite our [paper](https://graphics.tu-bs.de/upload/publications/kappel2020NHMT/Kappel_NHMT.pdf) using the following BibTeX:
 
 ```
 @article{kappel2020high,
