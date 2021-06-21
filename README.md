@@ -78,11 +78,13 @@ Note that during inference, the dataset path refers to the source actor sequence
 If you use our code for your publications, please cite our [paper](https://graphics.tu-bs.de/upload/publications/kappel2020NHMT/Kappel_NHMT.pdf) using the following BibTeX:
 
 ```
-@article{kappel2020high,
-  title={High-Fidelity Neural Human Motion Transfer from Monocular Video},
-  author={Kappel, Moritz and Golyanik, Vladislav and Elgharib, Mohamed and Henningson, Jann-Ole and Seidel, Hans-Peter and Castillo, Susana and Theobalt, Christian and Magnor, Marcus},
-  journal={arXiv preprint arXiv:2012.10974},
-  year={2020}
+@InProceedings{Kappel_2021_CVPR,
+    author    = {Kappel, Moritz and Golyanik, Vladislav and Elgharib, Mohamed and Henningson, Jann-Ole and Seidel, Hans-Peter and Castillo, Susana and Theobalt, Christian and Magnor, Marcus},
+    title     = {High-Fidelity Neural Human Motion Transfer From Monocular Video},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {1541-1550}
 }
 ```
 
