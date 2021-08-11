@@ -484,7 +484,7 @@ class GaborRenderer():
         num_filter = 32
         discrete_kernels = [cv2.getGaborKernel((self.filter_size, self.filter_size), self.sigma, math.pi * i / num_filter, self.lambd, self.gamma, ktype=cv2.CV_32F) for i in range(num_filter)]
         activations = np.stack([np.absolute(cv2.filter2D(self.image_gray, -1, i)) for i in discrete_kernels], axis=0)
-        confidence = np.expand_dims(np.amax(activations, axis=0) / cv2.GaussianBlur(self.image_gray, ksize=(7, 7), sigmaX=2.0), axis=2)
+        confidence = np.expand_dims(np.amax(activations, axis=0) / (cv2.GaussianBlur(self.image_gray, ksize=(7, 7), sigmaX=2.0) + 1e-6), axis=2)
         orientation = np.argmax(activations, axis=0) * 2.0 * math.pi / num_filter
         vectors = np.stack((np.cos(orientation), np.sin(orientation)), axis=2)
         vectors_smoothed = cv2.GaussianBlur(vectors * confidence, ksize=(7, 7), sigmaX=self.vectorSmoothing).astype(np.float32)
